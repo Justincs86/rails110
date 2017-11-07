@@ -19,7 +19,7 @@
               <td> # </td>
               <td> <%= link_to group.title, group_path(group) %> </td>
               <td> <%= group.description %></td>
-              <td> <%= link_to "Edit", edit_group_path(group),method: :post, class:"btn btn-sm btn-default" %>
+              <td> <%= link_to "Edit", edit_group_path(group), class:"btn btn-sm btn-default" %>
                    <%= link_to "Delete", group_path(group),method: :delete, class:"btn btn-sm btn-danger", data: { confirm: "Are you sure"} %>
               </td>
           </tr>
