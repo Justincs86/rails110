@@ -1,0 +1,27 @@
+<h1 class="text-center"> My groups </h1>
+
+<table class="table table-hover">
+  <thead>
+      <tr>
+          <th> # </th>
+          <th> Description </th>
+          <th> Post Count </th>
+          <th> Last Update </th>
+      </tr>
+  </thead>
+
+  <tbody>
+    <% @groups.each do |group| %>
+      <tr>
+          <td> # </td>
+          <td> <%= link_to group.title, group_path(group) %></td>
+          <td> <%= group.description %> </td>
+          <td> <%= group.posts.count %> </td>
+          <td> <%= group.updated_at %> </td> 
+      </tr>
+    <% end %>
+
+
+  </tbody>
+
+</table>
